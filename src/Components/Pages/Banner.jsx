@@ -3,10 +3,10 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import 'swiper/css/navigation';
-import Image from "/Visusal Studio Codes/Projects React/shoplane/src/Assets/H&M.png";
-import Image_2 from "/Visusal Studio Codes/Projects React/shoplane/src/Assets/US Polo.png";
-import Image_3 from "/Visusal Studio Codes/Projects React/shoplane/src/Assets/Wonder Women.png";
-import Image_4 from "/Visusal Studio Codes/Projects React/shoplane/src/Assets/Puma.png";
+import Image from "../../Assets/H&M.png";
+import Image_2 from "../../Assets/US Polo.png";
+import Image_3 from "../../Assets/Wonder Women.png";
+import Image_4 from "../../Assets/Puma.png";
 
 function Banner() {
   return (

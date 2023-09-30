@@ -1,7 +1,7 @@
-import icon from '/Visusal Studio Codes/Projects React/shoplane/src/Assets/icon1.png';
-import icon_2 from '/Visusal Studio Codes/Projects React/shoplane/src/Assets/icon2.png';
-import icon_3 from '/Visusal Studio Codes/Projects React/shoplane/src/Assets/icon3.png';
-import icon_4 from '/Visusal Studio Codes/Projects React/shoplane/src/Assets/icon4.png';
+import icon from '../../Assets/icon1.png';
+import icon_2 from '../../Assets/icon2.png';
+import icon_3 from '../../Assets/icon3.png';
+import icon_4 from '../../Assets/icon4.png';
 
 function Icon () {
     return(
