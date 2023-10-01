@@ -5,6 +5,7 @@ import Clothing from "./Components/Clothing";
 import Accessories from "./Components/Accessories";
 import ProductDetails from "./Components/Pages/Details/ProductDetails";
 import Product from "./Components/Pages/Details/Product";
+import ErrorPage from "./Components/Error";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/product/:productId" element={<ProductDetails />} />
         <Route path="/product" element={<Product />} />
         <Route path="/old-page" element={<CustomRedirect />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
   );
