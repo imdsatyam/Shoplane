@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Menu from "../Menu";
 import Footer from "../Footer";
 import Copyright from "../Copyright";
@@ -77,17 +79,27 @@ function ProductDetails() {
                 Add to Cart
               </button>
             </a>
-
-            {/* Links to the next and previous products */}
             <div className="next-prev-links mt-5">
               {product.id > 1 && (
-                <Link to={`/product/${parseInt(productId, 10) - 1}`}>
-                  Previous Product
+                <Link
+                  to={`/product/${parseInt(productId, 10) - 1}`}
+                  className="next-prev-link float-left first:ml-0 text-xs font-semibold flex w-8 h-8 mx-1 p-0 rounded-full items-center justify-center leading-tight relative border border-solid border-green-500 bg-white text-green-500"
+                >
+                  <FontAwesomeIcon
+                    icon={faArrowLeft}
+                    className="arrow-icon left"
+                  />
                 </Link>
               )}
-              {product.id < 5 && (
-                <Link to={`/product/${parseInt(productId, 10) + 1}`}>
-                  Next Product
+              {product.id < 10 && (
+                <Link
+                  to={`/product/${parseInt(productId, 10) + 1}`}
+                  className="next-prev-link float-right first:ml-0 text-xs font-semibold flex w-8 h-8 mx-1 p-0 rounded-full items-center justify-center leading-tight relative border border-solid border-green-500 bg-white text-green-500"
+                >
+                  <FontAwesomeIcon
+                    icon={faArrowRight}
+                    className="arrow-icon right"
+                  />
                 </Link>
               )}
             </div>
