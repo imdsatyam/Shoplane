@@ -1,5 +1,5 @@
-import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import React from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import Home from "./Components/Home";
 import Clothing from "./Components/Clothing";
 import Accessories from "./Components/Accessories";
@@ -15,9 +15,20 @@ function App() {
         <Route path="/accessories" element={<Accessories />} />
         <Route path="/product/:productId" element={<ProductDetails />} />
         <Route path="/product" element={<Product />} />
+        <Route path="/old-page" element={<CustomRedirect />} />
       </Routes>
     </div>
   );
+}
+
+function CustomRedirect() {
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    navigate("/new-page");
+  }, [navigate]);
+
+  return <p>Redirecting...</p>;
 }
 
 export default App;
