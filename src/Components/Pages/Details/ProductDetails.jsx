@@ -36,7 +36,7 @@ function ProductDetails() {
         <div className="productfeature flex flex-row flex-wrap mx-72 mt-24 mb-20">
           <div className="productimage" style={{ width: "35%" }}>
             <img
-              src={product.photos[selectedImageIndex]} // Use selectedImageIndex here
+              src={product.photos[selectedImageIndex]}
               alt={`Product ${product.id}`}
               style={{ width: "100%" }}
             />
@@ -65,7 +65,7 @@ function ProductDetails() {
                   style={{ width: "15%", height: "30%" }}
                   src={photo}
                   alt={`Product Preview ${index + 1}`}
-                  onClick={() => handleImageClick(index)} // Update selected image index
+                  onClick={() => handleImageClick(index)}
                 />
               ))}
             </div>

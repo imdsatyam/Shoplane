@@ -13,8 +13,8 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route path="/clothing" element={<Clothing />} />
         <Route path="/accessories" element={<Accessories />} />
-        <Route path="/product" element={<Product />} />
         <Route path="/product/:productId" element={<ProductDetails />} />
+        <Route path="/product" element={<Product />} />
       </Routes>
     </div>
   );
