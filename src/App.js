@@ -1,11 +1,10 @@
 import React from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./Components/Home";
 import Clothing from "./Components/Clothing";
 import Accessories from "./Components/Accessories";
 import ProductDetails from "./Components/Pages/Details/ProductDetails";
 import Product from "./Components/Pages/Details/Product";
-import ErrorPage from "./Components/Error";
 
 function App() {
   return (
@@ -16,21 +15,9 @@ function App() {
         <Route path="/accessories" element={<Accessories />} />
         <Route path="/product/:productId" element={<ProductDetails />} />
         <Route path="/product" element={<Product />} />
-        <Route path="/old-page" element={<CustomRedirect />} />
-        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
   );
-}
-
-function CustomRedirect() {
-  const navigate = useNavigate();
-
-  React.useEffect(() => {
-    navigate("/new-page");
-  }, [navigate]);
-
-  return <p>Redirecting...</p>;
 }
 
 export default App;

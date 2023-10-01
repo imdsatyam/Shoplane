@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Menu from "../Menu";
 import Footer from "../Footer";
 import Copyright from "../Copyright";
@@ -77,6 +77,20 @@ function ProductDetails() {
                 Add to Cart
               </button>
             </a>
+
+            {/* Links to the next and previous products */}
+            <div className="next-prev-links mt-5">
+              {product.id > 1 && (
+                <Link to={`/product/${parseInt(productId, 10) - 1}`}>
+                  Previous Product
+                </Link>
+              )}
+              {product.id < 5 && (
+                <Link to={`/product/${parseInt(productId, 10) + 1}`}>
+                  Next Product
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       )}
