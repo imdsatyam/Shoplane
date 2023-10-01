@@ -30,18 +30,12 @@ function Accessory() {
         {product.map((element) => {
           return (
             <div className="product mx-3 my-4 md:my-8" key={element.id}>
-              <a href="/product">
+              <a href={`/product/${element.id}`}>
                 <div className="productimage">
-                  <img
-                    src={element.preview}
-                    alt=""
-                    style={{ maxWidth: "100%", height: "auto" }}
-                  />
+                  <img src={element.preview} alt={element.name} />
                 </div>
                 <div className="productdetails text-center">
-                  <p className="text-3xl pt-2 md:pt-4">
-                    {element.name}
-                  </p>
+                  <p className="text-3xl pt-2 md:pt-4">{element.name}</p>
                   <h4
                     className="text-xl py-2 md:py-4 font-bold"
                     style={{ color: "var(--Product-Color)" }}

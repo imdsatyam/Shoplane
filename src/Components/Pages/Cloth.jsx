@@ -28,7 +28,7 @@ function Cloth() {
         {product.map((element) => {
           return (
             <div className="product mx-3 my-4 md:my-8" key={element.id}>
-              <a href="/product">
+              <a href={`/product/${element.id}`}>
                 <div className="productimage">
                   <img src={element.preview} alt="" />
                 </div>
