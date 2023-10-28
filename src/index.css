@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
   --Primary-Color: #ffffff;
@@ -24,52 +24,76 @@ html {
   outline: none;
 }
 
-body{
+body {
   background-color: var(--Primary-Color);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
-.logo h4 span{
-  color: var(--Icon-Color)
-}
-
-.menulist a:hover{
+.logo h4 span {
   color: var(--Icon-Color);
 }
 
-.product{
+.menulist a:hover {
+  color: var(--Icon-Color);
+}
+
+.product {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.product:hover{
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+.product:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
-.imagepreview img:hover{
+.imagepreview img:hover {
   border: 3px solid #009688;
 }
 
-.productdetails button:hover{
+.productdetails button:hover {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
+.itemdetails {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.IconList {
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 150, 136, 0.7), 0 0 0 0 rgba(0, 150, 136, 0.7);
+  }
+  40% {
+    box-shadow: 0 0 0 50px rgba(0, 150, 136, 0), 0 0 0 0 rgba(0, 150, 136, 0.7);
+  }
+  80% {
+    box-shadow: 0 0 0 50px rgba(0, 150, 136, 0), 0 0 0 30px rgba(0, 150, 136, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 150, 136, 0), 0 0 0 30px rgba(0, 150, 136, 0);
+  }
+}
+
 @media screen and (max-width: 1280px) {
-  .menubar{
+  .menubar {
     display: none;
   }
 }
 
-@media (min-width:780px) and (max-width:1280px){
-  html{
+@media (min-width: 780px) and (max-width: 1280px) {
+  html {
     font-size: 60%;
   }
 }
 
-@media (min-width:780px) and (max-width:1080px){
-  html{
+@media (min-width: 780px) and (max-width: 1080px) {
+  html {
     font-size: 55%;
   }
-  .productfeature{
+  .productfeature {
     margin: 5rem 2rem !important;
   }
   .productimage {
@@ -80,11 +104,11 @@ body{
   }
 }
 
-@media (min-width:580px) and (max-width:780px){
-  html{
+@media (min-width: 580px) and (max-width: 780px) {
+  html {
     font-size: 50%;
   }
-  .productfeature{
+  .productfeature {
     margin: 5rem 2rem !important;
   }
   .productimage {
@@ -93,15 +117,14 @@ body{
   .productdetails {
     margin: 5rem 10rem !important;
     width: 100% !important;
-    
   }
 }
 
-@media (min-width:480px) and (max-width:580px){
-  html{
+@media (min-width: 480px) and (max-width: 580px) {
+  html {
     font-size: 40%;
   }
-  .productfeature{
+  .productfeature {
     margin: 5rem 2rem !important;
   }
   .productimage {
@@ -110,15 +133,14 @@ body{
   .productdetails {
     margin: 5rem 10rem !important;
     width: 100% !important;
-    
   }
 }
 
-@media (min-width:320px) and (max-width:480px){
-  html{
+@media (min-width: 320px) and (max-width: 480px) {
+  html {
     font-size: 30%;
   }
-  .productfeature{
+  .productfeature {
     margin: 5rem 2rem !important;
   }
   .productimage {
@@ -127,6 +149,5 @@ body{
   .productdetails {
     margin: 5rem 10rem !important;
     width: 100% !important;
-    
   }
 }
